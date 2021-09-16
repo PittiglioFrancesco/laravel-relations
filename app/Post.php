@@ -9,6 +9,11 @@ class Post extends Model
     protected $fillable = [
         'title',
         'slug',
-        'content'
+        'content',
+        'category_id'
     ];
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }
